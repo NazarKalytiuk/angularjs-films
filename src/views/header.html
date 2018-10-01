@@ -1,0 +1,13 @@
+<md-toolbar md-scroll-shrink ng-if="true" ng-controller="HeaderController as header">
+  <div class="md-toolbar-tools">
+    <a href="/">My films</a>
+
+    <div style="flex: 1 1 auto"></div>
+    <form class="search" ng-submit="header.search()">
+      <input ng-model="header.query" placeholder="Search">
+      <a ng-click="header.search()" class="search-btn">
+        <md-icon><i class="material-icons md-24">search</i></md-icon>
+      </a>
+    </form>
+  </div>
+</md-toolbar>

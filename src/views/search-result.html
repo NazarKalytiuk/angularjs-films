@@ -1,0 +1,21 @@
+<div class="error" ng-if="searchR.error">
+  <p> {{ searchR.error }} </p>
+</div>
+
+<div class="search-results" ng-if="!searchR.error">
+  <md-card ng-repeat="item in searchR.films">
+    <img ng-src="{{ item.Poster }}" class="md-card-image" alt="Washed Out">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{ item.Title }}</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+      <p> {{ item.Year }} </p>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button ng-click="searchR.save(item.imdbID)">SAVE</md-button>
+      <md-button class="md-raised md-primary" href="#!/film/{{item.imdbID}}">VIEW MORE</md-button>
+    </md-card-actions>
+  </md-card>
+</div>

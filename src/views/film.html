@@ -1,0 +1,15 @@
+<div class="film">
+  <div class="poster">
+      <img ng-src="{{ film.film.Poster }}" class="md-card-image">
+  </div>
+  <div class="data">
+    <h1> {{ film.film.Title }}  {{ film.film.Year }}</h1>
+    <p> <md-icon><i class="material-icons md-24">star</i></md-icon> {{ film.film.imdbRating }} </p>
+    <p> <md-icon><i class="material-icons md-24">monetization_on</i></md-icon> {{ film.film.BoxOffice }} </p>
+    <p> <md-icon><i class="material-icons md-24">access_time</i></md-icon> {{ film.film.Runtime }} </p>
+    <p> Director: {{ film.film.Director }} </p>
+    <p> Awardds: {{ film.film.Awards }} </p>
+    <p> {{ film.film.Plot }} </p>
+    <md-button class="md-raised md-accent" ng-click="film.save(film.film.imdbID)">SAVE</md-button>
+  </div>
+</div>
